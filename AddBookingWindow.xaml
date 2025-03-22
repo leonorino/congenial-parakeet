@@ -1,0 +1,72 @@
+﻿<Window x:Class="working.AddBookingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:working"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        Title="AddBookingWindow" Height="450" Width="800">
+    <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="300"
+                Margin="30">
+        <TextBlock Text="Create new booking"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,10"/>
+        
+        <TextBlock Text="Last name" FontSize="14"/>
+        <TextBox x:Name="LastName"
+                     Margin="0,5,0,10"
+                     Height="35"
+                     BorderBrush="Black"
+                     BorderThickness="1"/>
+
+        <TextBlock Text="First name" FontSize="14"/>
+        <TextBox x:Name="FirstName"
+                     Margin="0,5,0,10"
+                     Height="35"
+                     BorderBrush="Black"
+                     BorderThickness="1"/>
+
+        <TextBlock Text="Document" FontSize="14"/>
+        <TextBox x:Name="Document"
+                     Margin="0,5,0,10"
+                     Height="35"
+                     BorderBrush="Black"
+                     BorderThickness="1"/>
+
+        <TextBlock Text="Room" FontSize="14"/>
+        <ComboBox x:Name="Room"
+                      Margin="0,5,0,10"
+                      Height="35"
+                      BorderBrush="Black"
+                      BorderThickness="1"/>
+
+        <TextBlock Text="Check-in date" FontSize="14"/>
+        <DatePicker x:Name="CheckInDate"
+                        Margin="0,5,0,10"
+                        Height="35"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+
+        <TextBlock Text="Check-out date" FontSize="14"/>
+        <DatePicker x:Name="CheckOutDate"
+                        Margin="0,5,0,10"
+                        Height="35"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+
+        <Button Content="Add booking"
+                    Width="120"
+                    Height="30"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    Cursor="Hand"
+                    Margin="0,10,0,0"
+                    BorderThickness="1"
+                    Click="AddButton_Click"/>
+    </StackPanel>
+</Window>

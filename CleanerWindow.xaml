@@ -1,0 +1,33 @@
+﻿<Window x:Class="working.CleanerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:working"
+        mc:Ignorable="d"
+        Title="Cleaner" Height="450" Width="800">
+    <Grid Margin="5">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Cleaning schedule"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="2,10"
+                       HorizontalAlignment="Center"/>
+
+            <DataGrid Name="ScheduleDataGrid" AutoGenerateColumns="false" CanUserAddRows="false" IsReadOnly="true">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Cleaning date" Binding="{Binding cleaning_date}"/>
+                    <DataGridTextColumn Header="Room" Binding="{Binding Room.number}"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding status}"/>
+                    <DataGridTemplateColumn Header="Is done">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Done" Click="DoneButton_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
