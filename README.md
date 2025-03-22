@@ -1,0 +1,1 @@
+If you want to get this running, first you have to summon the Satan. Then, migrate those models to database somehow, idk. Oh, and you also need a Visual Studio solution, 'cause I forgot to include it.
